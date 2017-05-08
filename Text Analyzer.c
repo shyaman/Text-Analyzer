@@ -61,10 +61,10 @@ int main(int argc, char **argv) {
 	    		break;
 		    case 'l':
 		        length = atoi(optarg);
-		        if(length < 0){
+		        if(length < 0 || isalpha(optarg[0])){
 		        	printf("Invalid option for [-l]\n");
    					printf("usage: %s [-l length] [-w | -c] [--scaled] filename1 filename2 ..\n",argv[0]);
-   					return 0;
+   					return;
 		        }else if(length == 0){
 		        	return 0;
 		        }
@@ -110,9 +110,13 @@ int main(int argc, char **argv) {
    		}
 		process(fop,isCharProcess);
 		fclose(fop);
-
 	}
 	
+	if(totalWordsCount == 0){
+		printf("No data to process\n");
+		return 0;
+	}
+
 	sortWordFrequencies();
 	drawGraph(length,isScaled);		
 
