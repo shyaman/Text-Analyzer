@@ -3,6 +3,6 @@ It analyze any number of files and graph the frequencies
 
 usage:  [-l length] [-w | -c] [--scaled] filename1 filename2 ..
 
-  -w        = word process
-  -c        = character process
-  --scaled  = scaled graph
+  -w        = word proces;
+  -c        = character process;
+  --scaled  = scaled graph;
