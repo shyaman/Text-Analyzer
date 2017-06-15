@@ -87,6 +87,7 @@ int main(int argc, char **argv) {
 		    default:
         		return 0;
 	   }
+	   	curind = optind;
    }
    if(isCharProcess == TRUE && isWordProcess == TRUE){
    		printf("[-c] and [-w] cannot use together\n");
